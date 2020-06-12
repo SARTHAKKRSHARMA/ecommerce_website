@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title_block %}
+    Payment
+{% endblock %}
+
+{% block content %}
+    <h1>Pay By</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+        <label >Pay through Stripe
+            <input type="radio" name="payment" value="byStripe">
+        </label>
+        </div>
+        <div>
+        <label >
+            Pay Through PayPay<input type="radio" name="payment"  value="byPayPay">
+        </label>
+        </div>
+        <div>
+        <label for="">
+            {% if request.user.is_authenticated %}
+            Cash on Delivery<input type="radio" name="payment" value="COD">
+            {% endif %}
+        </label>
+        </div>
+        <button>Pay ${{total_cost}}</button>
+    </form>
+    
+{% endblock %}

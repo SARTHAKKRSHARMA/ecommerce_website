@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-12 10:37+0530\n"
+"PO-Revision-Date: 2020-06-12 10:43+0000\n"
+"Last-Translator: b'  <admin@gmail.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
+
+#: .\cart\forms.py:6
+msgid "Weight"
+msgstr "重量"
+
+#: .\coupons\forms.py:4
+msgid "Coupon"
+msgstr "クーポン"
+
+#: .\myshop\settings.py:126
+msgid "English"
+msgstr "英語"
+
+#: .\myshop\settings.py:127
+msgid "Japanese"
+msgstr "日本語"
+
+#: .\myshop\urls.py:24
+msgid "admin/"
+msgstr "管理者/"
+
+#: .\myshop\urls.py:25
+msgid "cart"
+msgstr "カート"
+
+#: .\myshop\urls.py:26
+msgid "orders/"
+msgstr "注文/"
+
+#: .\myshop\urls.py:27
+msgid "payment/"
+msgstr "支払い/"
+
+#: .\myshop\urls.py:28
+#, fuzzy
+#| msgid "Coupon"
+msgid "coupons/"
+msgstr "クーポン/"
+
+#: .\payment\urls.py:8
+msgid "process/"
+msgstr "処理する/"
+
+#: .\payment\urls.py:9
+msgid "stripe/"
+msgstr "ストライプ/"
+
+#: .\payment\urls.py:10
+msgid "cod/"
+msgstr "タラ/"
+
+#: .\payment\urls.py:11
+msgid "success/"
+msgstr "成功/"
+
+#: .\payment\urls.py:12
+msgid "charge/"
+msgstr "充電/"
+
+#: .\payment\urls.py:13
+msgid "cancel/"
+msgstr "キャンセル/"
+
+#: .\shop\templates\base.html:8 .\shop\templates\base.html:14
+msgid "My Shop"
+msgstr "私の店"
+
+#: .\shop\templates\base.html:21
+msgid "Your cart:"
+msgstr "あなたのカート"
+
+#: .\shop\templates\base.html:23
+#, python-format
+msgid ""
+"\n"
+"                %(items)s item,$%(total)s\n"
+"                "
+msgid_plural ""
+"       \n"
+"                %(items)s items, $%(total)s\n"
+"                "
+msgstr[0] ""
+
+#: .\shop\templates\base.html:30
+msgid "Your cart is empty"
+msgstr "あなたのカートは空です"
+
+#: .\shop\templates\shop\product\detail.html:16
+msgid "Add to Cart"
+msgstr "カートに追加"

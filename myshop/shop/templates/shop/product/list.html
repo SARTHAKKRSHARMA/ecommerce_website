@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title_block %}
+    {% if subcategory.name %} {{subcategory.name}} {% elif category.name  %} {{category.name}} {% else %} Products {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div id="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li {% if not category %}class='selected'{% endif %} ><a href="{% url 'shop:product_list' %}">All</a></li>
+            {% for c in categories %}
+                <li {% if category.slug == c.slug %} class="selected" {% endif %}> <a href="{% url 'shop:product_list_by_category'  category_slug=c.slug  %}">{{c}}</a>
+                    {% if category.name == c.name %}
+                        <ol>
+                            {% for product in category.products.all %}
+                                {% if not product.selling_price %}
+                                    <li><a href="{% if not product.selling_price %} {% url 'shop:product_list_by_subcategory' category_slug=c.slug subcategory_slug=product.slug %} {% else %} {% url 'shop:product_detail' id=product.id slug=product.slug %} {% endif %}">{{product}}</a>
+                                        
+                                {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ol>    
+                    
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id='main' class='product-list'>
+        <h1>{% if category %} {{category.name}} {% else %} Products {% endif %}</h1>
+        {% for product in products %}
+            <div class='item'>
+                <a href="{% url 'shop:product_detail' id=product.id slug=product.slug %}"><img src="{% if product.image %}{{product.image.url}}{% else %} {% static 'img/no_image.png' %} {% endif %}" alt=""></a>
+                <a href="{% url 'shop:product_detail' id=product.id slug=product.slug %}">{{product.name}}</a>
+                <br>
+                ${{product.selling_price}}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+    
+</body>
+</html>
